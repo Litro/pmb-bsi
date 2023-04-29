@@ -15,6 +15,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping structure for table ci_pmb.pendaftaran
+DROP TABLE IF EXISTS `pendaftaran`;
 CREATE TABLE IF NOT EXISTS `pendaftaran` (
   `index` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT 0,

@@ -15,6 +15,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 -- Dumping structure for table ci_pmb.users
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) NOT NULL,
@@ -27,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Dumping data for table ci_pmb.users: ~5 rows (approximately)
+-- Dumping data for table ci_pmb.users: ~6 rows (approximately)
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `email`, `password`, `role_id`, `date_added`) VALUES
 	(1, 'Web', 'Master', 'admin@bsi.com', '$2y$10$aCOXWj6L2AFOG5P2Lpx28.atW7vU7lbwC5XxVML4uUCjfEledjXd6', 2, '2018-12-17 11:09:10'),
 	(2, 'Web', 'User', 'user@bsi.com', '$2y$10$aCOXWj6L2AFOG5P2Lpx28.atW7vU7lbwC5XxVML4uUCjfEledjXd6', 1, '2018-12-17 11:09:10'),
