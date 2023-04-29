@@ -1,8 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <section class="section">
-	<?= validation_errors() ?>
-	<form action="<?= base_url('pendaftaran'); ?>" method="POST">
+	<form action="#" method="POST">
 		<div class="row">
 			<div class="card">
 				<div class="card-body">
@@ -23,14 +22,14 @@
 					<div class="row mb-3">
 						<label for="inputNama" class="col-sm-1 col-form-label">Nama</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="name" id="inputNama" required>
+							<input type="text" class="form-control" name="name" id="inputNama">
 						</div>
 						<label for="inputJenisKelamin" class="col-sm-1 col-form-label">Jenis Kelamin</label>
 						<div class="col-sm-2">
 							<select name="gender" id="inputJenisKelamin" class="form-select">
 								<option selected>Choose...</option>
-								<option value="Laki - Laki">Laki - Laki</option>
-								<option value="Perempuan">Perempuan</option>
+								<option value="F">Laki - Laki</option>
+								<option value="M">Perempuan</option>
 							</select>
 						</div>
 						<label for="inputAgama" class="col-sm-1 col-form-label">Agama</label>
@@ -94,6 +93,8 @@
 							<select name="faculty" id="inputFakultas" class="form-select">
 								<option selected>Choose...</option>
 								<option value="Teknik dan Infomatika">Teknik dan Infomatika</option>
+								<option value="Ekonomi dan Bisnis">Ekonomi dan Bisnis</option>
+								<option value="Komunikasi dan Bahasa">Komunikasi dan Bahasa</option>
 							</select>
 						</div>
 					</div>
@@ -102,15 +103,6 @@
 						<div class="col-sm-10">
 							<select name="programStudy" id="inputProdi" class="form-select">
 								<option selected>Choose...</option>
-								<option value="S1-Rekayasa Perangkat Lunak">S1-Rekayasa Perangkat Lunak</option>
-								<option value="S1-Ilmu komputer">S1-Ilmu komputer</option>
-								<option value="S1-Teknologi Informasi">S1-Teknologi Informasi</option>
-								<option value="S1-Sistem Informasi">S1-Sistem Informasi</option>
-								<option value="S1-Teknik Rekayasa Elektro">S1-Teknik Rekayasa Elektro</option>
-								<option value="S1-Teknik Rekayasa Industri">S1-Teknik Rekayasa Industri</option>
-								<option value="D3-Sistem Informasi Akutansi">D3-Sistem Informasi Akutansi</option>
-								<option value="D3-Sistem Informasi">D3-Sistem Informasi</option>
-								<option value="D3-Teknologi Komputer">D3-Teknologi Komputer</option>
 							</select>
 						</div>
 					</div>
@@ -209,53 +201,53 @@
 					<div class="row mb-3">
 						<label for="inputNamaSekolah" class="col-sm-2 col-form-label">Nama Sekolah</label>
 						<div class="col-sm-4">
-							<input type="text" class="form-control" name="schoolName" id="inputNamaSekolah">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
 					</div>
 					<h5 class="card-title">
 						Rata Rata Nilai Semester
 					</h5>
 					<div class="row mb-3">
-						<label for="inputSemester1" class="col-sm-1 col-form-label">Semester 1</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 1</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester1" id="inputSemester1">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
-						<label for="inputSemester2" class="col-sm-1 col-form-label">Semester 2</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 2</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester2" id="inputSemester2">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
-						<label for="inputSemester3" class="col-sm-1 col-form-label">Semester 3</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 3</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester3" id="inputSemester3">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
 					</div>
 					<div class="row mb-3">
-						<label for="inputSemester4" class="col-sm-1 col-form-label">Semester 4</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 4</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester4" id="inputSemester4">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
-						<label for="inputSemester5" class="col-sm-1 col-form-label">Semester 5</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 5</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester5" id="inputSemester5">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
-						<label for="inputSemester6" class="col-sm-1 col-form-label">Semester 6</label>
+						<label for="inputNamaSekolah" class="col-sm-1 col-form-label">Semester 6</label>
 						<div class="col-sm-3">
-							<input type="text" class="form-control" name="semester6" id="inputSemester6">
+							<input type="text" class="form-control" id="inputNamaSekolah">
 						</div>
 					</div>
 					<h5 class="card-title">
 						Berkas Transkrip Nilai, Piagam dan Lain - lain
 					</h5>
 					<div class="row mb-3">
-						<label for="inputBerkasSiswa" class="col-sm-2 col-form-label">Berkas Siswa</label>
+						<label for="inputNamaSekolah" class="col-sm-2 col-form-label">Berkas Siswa</label>
 						<div class="col-sm-4">
-							<input type="file" class="form-control" name="berkasSiswa" id="inputBerkasSiswa">
+							<input type="file" class="form-control" id="inputNamaSekolah">
 						</div>
 					</div>
 					<div class="row mb-3">
-						<label for="inputBerkasPrestasi" class="col-sm-2 col-form-label">Berkas Prestasi</label>
+						<label for="inputNamaSekolah" class="col-sm-2 col-form-label">Berkas Prestasi</label>
 						<div class="col-sm-4">
-							<input type="file" class="form-control" name="berkasPrestasi" id="inputBerkasPrestasi">
+							<input type="file" class="form-control" id="inputNamaSekolah">
 						</div>
 					</div>
 				</div>

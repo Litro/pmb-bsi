@@ -1,6 +1,5 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-?>
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -217,8 +216,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </a>
           </li>
           <li>
-            <a href="components-breadcrumbs.html">
-              <i class="bi bi-circle"></i><span>Jadwal kegiatan</span>
+            <a href="<?= base_url('gelombang') ?>">
+              <i class="bi bi-circle"></i><span>Jadwal Gelombang</span>
             </a>
           </li>
         </ul>

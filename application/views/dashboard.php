@@ -305,4 +305,5 @@
           </div><!-- End Recent Activity -->
 
       </div>
+      </div>
     </section>
