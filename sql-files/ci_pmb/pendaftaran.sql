@@ -39,14 +39,16 @@ CREATE TABLE IF NOT EXISTS `pendaftaran` (
   `motherjob` varchar(28) NOT NULL DEFAULT '0',
   `motherphone` varchar(28) NOT NULL DEFAULT '0',
   `motherincome` varchar(28) NOT NULL DEFAULT '0',
+  `status` varchar(28) DEFAULT 'PENDING',
   PRIMARY KEY (`index`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Dumping data for table ci_pmb.pendaftaran: 1 rows
+-- Dumping data for table ci_pmb.pendaftaran: 2 rows
 /*!40000 ALTER TABLE `pendaftaran` DISABLE KEYS */;
-INSERT INTO `pendaftaran` (`index`, `user_id`, `nisn`, `nik`, `name`, `gender`, `religion`, `birthplace`, `birthdate`, `photo`, `address`, `email`, `phone`, `fakultas`, `prodi`, `father`, `fatherjob`, `fatherphone`, `fatherincome`, `mother`, `motherjob`, `motherphone`, `motherincome`) VALUES
-	(0000000004, 2, '543456456', '456456456', '456456456', 'Perempuan', 'Kristen', '45645645', '2023-03-27', 'bina-sarana-informatika-univ.jpeg', '64564564564', '456456456@gmail.com', '456456456456', 'Teknik dan Infomatika', 'S1-Ilmu komputer', '0', '0', '0', '0', '0', '0', '0', '0');
+INSERT INTO `pendaftaran` (`index`, `user_id`, `nisn`, `nik`, `name`, `gender`, `religion`, `birthplace`, `birthdate`, `photo`, `address`, `email`, `phone`, `fakultas`, `prodi`, `father`, `fatherjob`, `fatherphone`, `fatherincome`, `mother`, `motherjob`, `motherphone`, `motherincome`, `status`) VALUES
+	(0000000004, 2, '543456456', '456456456', '456456456', 'Perempuan', 'Kristen', '45645645', '2023-03-27', 'bina-sarana-informatika-univ.jpeg', '64564564564', '456456456@gmail.com', '456456456456', 'Teknik dan Infomatika', 'S1-Ilmu komputer', '0', '0', '0', '0', '0', '0', '0', '0', 'PENDING'),
+	(0000000011, 3, '123145123152312', '123251342314123', 'Louis Raynold V', 'Laki - Laki', 'Islam', 'Jakarta', '2023-03-29', 'bina-sarana-informatika-univ.jpeg', 'asdasdasd', 'arjunphp@gmail.com', '082112923800', 'Teknik dan Infomatika', 'S1-Ilmu komputer', 'Father', 'Wirausaha', '081248648748', '< 1.000.000', 'Mother', 'Wirausaha', '081334849488', '> 10.000.000', 'SUCCESS');
 /*!40000 ALTER TABLE `pendaftaran` ENABLE KEYS */;
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
