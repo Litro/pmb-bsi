@@ -1,8 +1,8 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 
 <section class="section">
-	<?= validation_errors() ?>
-	<form action="<?= base_url('pendaftaran'); ?>" method="POST">
+	<?= validation_errors('<div class="alert alert-danger alert-dismissible fade show" role="alert">','<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>') ?>
+	<form action="<?= base_url('pendaftaran'); ?>" method="POST" >
 		<div class="row">
 			<div class="card">
 				<div class="card-body">
@@ -13,21 +13,21 @@
 					<div class="row mb-3">
 						<label for="inputNISN" class="col-sm-1 col-form-label">NISN</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="nisn" id="inputNISN" required>
+							<input type="text" class="form-control" name="nisn" value="<?= set_value('nisn'); ?>" id="inputNISN" required>
 						</div>
 						<label for="inputNIK" class="col-sm-1 col-form-label">NIK</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="nik" id="inputNIK" required>
+							<input type="text" class="form-control" name="nik" value="<?= set_value('nik'); ?>" id="inputNIK" required>
 						</div>
 					</div>
 					<div class="row mb-3">
 						<label for="inputNama" class="col-sm-1 col-form-label">Nama</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="name" id="inputNama" required>
+							<input type="text" class="form-control" name="name" value="<?= set_value('name'); ?>" id="inputNama" required>
 						</div>
 						<label for="inputJenisKelamin" class="col-sm-1 col-form-label">Jenis Kelamin</label>
 						<div class="col-sm-2">
-							<select name="gender" id="inputJenisKelamin" class="form-select">
+							<select name="gender" value="<?= set_select('gender'); ?>" id="inputJenisKelamin" class="form-select">
 								<option selected>Choose...</option>
 								<option value="Laki - Laki">Laki - Laki</option>
 								<option value="Perempuan">Perempuan</option>
@@ -35,7 +35,7 @@
 						</div>
 						<label for="inputAgama" class="col-sm-1 col-form-label">Agama</label>
 						<div class="col-sm-2">
-							<select name="religion" id="inputAgama" class="form-select">
+							<select name="religion" value="<?= set_select('religion'); ?>" id="inputAgama" class="form-select">
 								<option selected>Choose...</option>
 								<option value="Islam">Islam</option>
 								<option value="Kristen">Kristen</option>
@@ -49,11 +49,11 @@
 					<div class="row mb-3">
 						<label for="inputTempatLahir" class="col-sm-1 col-form-label">Tempat Lahir</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="birthplace" id="inputTempatLahir">
+							<input type="text" class="form-control" name="birthplace" value="<?= set_value('birthplace'); ?>" id="inputTempatLahir">
 						</div>
 						<label for="inputTanggalLahir" class="col-sm-1 col-form-label">Tanggal Lahir</label>
 						<div class="col-sm-2">
-							<input type="date" class="form-control" name="birthdate" id="inputTanggalLahir">
+							<input type="date" class="form-control" name="birthdate" value="<?= set_value('birthdate'); ?>" id="inputTanggalLahir">
 						</div>
 						<label for="inputPhoto" class="col-sm-1 col-form-label">Photo</label>
 						<div class="col-sm-2">
@@ -63,17 +63,17 @@
 					<div class="row mb-3">
 						<label for="inputAlamat" class="col-sm-1 col-form-label">Alamat</label>
 						<div class="col-sm-5">
-							<textarea type="text" class="form-control" name="address" id="inputAlamat" style="height: 100px"></textarea>
+							<textarea type="text" class="form-control" name="address" value="<?= set_value('address'); ?>" id="inputAlamat" style="height: 100px"></textarea>
 						</div>
 						<div class="col-6">
 							<div class="row">
 								<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
 								<div class="col-sm-10 mb-3">
-									<input type="email" class="form-control" name="email" id="inputEmail">
+									<input type="email" class="form-control" name="email" value="<?= set_value('email'); ?>" id="inputEmail">
 								</div>
 								<label for="inputPhone" class="col-sm-2 col-form-label">No. HP</label>
 								<div class="col-sm-10">
-									<input type="text" class="form-control" name="phone" id="inputPhone">
+									<input type="text" class="form-control" name="phone" value="<?= set_value('phone'); ?>" id="inputPhone">
 								</div>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
 					<div class="row mb-3">
 						<label for="inputFakultas" class="col-sm-2 col-form-label">Fakultas</label>
 						<div class="col-sm-10">
-							<select name="faculty" id="inputFakultas" class="form-select">
+							<select name="faculty" value="<?= set_select('faculty'); ?>" id="inputFakultas" class="form-select">
 								<option selected>Choose...</option>
 								<option value="Teknik dan Infomatika">Teknik dan Infomatika</option>
 							</select>
@@ -100,7 +100,7 @@
 					<div class="row mb-3">
 						<label for="inputProdi" class="col-sm-2 col-form-label">Program Studi</label>
 						<div class="col-sm-10">
-							<select name="programStudy" id="inputProdi" class="form-select">
+							<select name="programStudy" value="<?= set_select('programStudy'); ?>" id="inputProdi" class="form-select">
 								<option selected>Choose...</option>
 								<option value="S1-Rekayasa Perangkat Lunak">S1-Rekayasa Perangkat Lunak</option>
 								<option value="S1-Ilmu komputer">S1-Ilmu komputer</option>
@@ -130,11 +130,11 @@
 					<div class="row mb-3">
 						<label for="inputNamaAyah" class="col-sm-1 col-form-label">Nama</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="fatherName" id="inputNamaAyah">
+							<input type="text" class="form-control" name="fatherName" value="<?= set_value('fatherName'); ?>" id="inputNamaAyah">
 						</div>
 						<label for="inputPekerjaanAyah" class="col-sm-1 col-form-label">Pekerjaan</label>
 						<div class="col-sm-5">
-							<select name="fatherJob" id="inputPekerjaanAyah" class="form-select">
+							<select name="fatherJob" value="<?= set_select('fatherJob'); ?>" id="inputPekerjaanAyah" class="form-select">
 								<option selected>Pilih...</option>
 								<option value="Wirausaha">Wirausaha</option>
 								<option value="Karyawan">Karyawan</option>
@@ -145,16 +145,16 @@
 					<div class="row mb-3">
 						<label for="inputNoHPAyah" class="col-sm-1 col-form-label">No. HP</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="fatherPhone" id="inputNoHPAyah">
+							<input type="text" class="form-control" name="fatherPhone" value="<?= set_value('fatherPhone'); ?>" id="inputNoHPAyah">
 						</div>
 						<label for="inputPenghasilanAyah" class="col-sm-1 col-form-label">Penghasilan</label>
 						<div class="col-sm-5">
-							<select name="fatherIncome" id="inputPenghasilanAyah" class="form-select">
+							<select name="fatherIncome" value="<?= set_select('fatherIncome'); ?>" id="inputPenghasilanAyah" class="form-select">
 								<option selected>Pilih...</option>
 								<option value="< 1.000.000">< 1.000.000</option>
-								<option value="1.000.000 - 2.500.000<">1.000.000 - 2.500.000</option>
-								<option value="2.500.000 - 5.000.000<">2.500.000 - 5.000.000</option>
-								<option value="5.000.000 - 7.500.000<">5.000.000 - 7.500.000</option>
+								<option value="1.000.000 - 2.500.000">1.000.000 - 2.500.000</option>
+								<option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
+								<option value="5.000.000 - 7.500.000">5.000.000 - 7.500.000</option>
 								<option value="7.500.000 - 10.000.000">7.500.000 - 10.000.000</option>
 								<option value="> 10.000.000">> 10.000.000</option>
 							</select>
@@ -166,11 +166,11 @@
 					<div class="row mb-3">
 						<label for="inputNamaIbu" class="col-sm-1 col-form-label">Nama</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="motherName" id="inputNamaIbu">
+							<input type="text" class="form-control" name="motherName" value="<?= set_value('motherName'); ?>" id="inputNamaIbu">
 						</div>
 						<label for="inputPekerjaanIbu" class="col-sm-1 col-form-label">Pekerjaan</label>
 						<div class="col-sm-5">
-							<select name="motherJob" id="inputPekerjaanIbu" class="form-select">
+							<select name="motherJob" value="<?= set_select('motherJob'); ?>" id="inputPekerjaanIbu" class="form-select">
 								<option selected>Pilih...</option>
 								<option value="Wirausaha">Wirausaha</option>
 								<option value="Karyawan">Karyawan</option>
@@ -181,16 +181,16 @@
 					<div class="row mb-3">
 						<label for="inputNoHPIbu" class="col-sm-1 col-form-label">No. HP</label>
 						<div class="col-sm-5">
-							<input type="text" class="form-control" name="motherPhone" id="inputNoHPIbu">
+							<input type="text" class="form-control" name="motherPhone" value="<?= set_value('motherPhone'); ?>" id="inputNoHPIbu">
 						</div>
 						<label for="inputPenghasilanIbu" class="col-sm-1 col-form-label">Penghasilan</label>
 						<div class="col-sm-5">
-							<select name="motherIncome" id="inputPenghasilanIbu" class="form-select">
-								<option selected>Pilih...</option>
+							<select name="motherIncome" value="<?= set_select('motherIncome'); ?>" id="inputPenghasilanIbu" class="form-select">
+								<option>Pilih...</option>
 								<option value="< 1.000.000">< 1.000.000</option>
-								<option value="1.000.000 - 2.500.000<">1.000.000 - 2.500.000</option>
-								<option value="2.500.000 - 5.000.000<">2.500.000 - 5.000.000</option>
-								<option value="5.000.000 - 7.500.000<">5.000.000 - 7.500.000</option>
+								<option value="1.000.000 - 2.500.000">1.000.000 - 2.500.000</option>
+								<option value="2.500.000 - 5.000.000">2.500.000 - 5.000.000</option>
+								<option value="5.000.000 - 7.500.000">5.000.000 - 7.500.000</option>
 								<option value="7.500.000 - 10.000.000">7.500.000 - 10.000.000</option>
 								<option value="> 10.000.000">> 10.000.000</option>
 							</select>
